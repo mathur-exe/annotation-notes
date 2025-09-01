@@ -1,0 +1,247 @@
+{
+  "main": {
+    "id": "2d9e7a92622c5154",
+    "type": "split",
+    "children": [
+      {
+        "id": "1d3b6ab24494fc37",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "12de6f0e7c4ae74c",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "057dd62eae398062",
+    "type": "split",
+    "children": [
+      {
+        "id": "8f72ebc1ac88c546",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d1fe0775e9d73f89",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "2078051062472166",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "5155332604775bc2",
+            "type": "leaf",
+            "state": {
+              "type": "surfing-tab-tree",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "surfing-tab-tree"
+            }
+          },
+          {
+            "id": "34884e3a4cbdc72d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          },
+          {
+            "id": "0b9c9313b9f82efe",
+            "type": "leaf",
+            "state": {
+              "type": "surfing-tab-tree",
+              "state": {},
+              "icon": "chrome",
+              "title": "Surfing Tab Tree"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "2314ab982dece1aa",
+    "type": "split",
+    "children": [
+      {
+        "id": "84702023d79170e7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "62f489a367fa8d4b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "idk/NLP to LMs.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for NLP to LMs"
+            }
+          },
+          {
+            "id": "ea08e20d4c2d65a5",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Literature Notes/⏳ DeepSeekMath.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from ⏳ DeepSeekMath"
+            }
+          },
+          {
+            "id": "8e8108fd7d252f0f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "b0472ffc508bb5f3",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Literature Notes/⏳ DeepSeekMath.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of ⏳ DeepSeekMath"
+            }
+          },
+          {
+            "id": "a8daa9b0fc6c9556",
+            "type": "leaf",
+            "state": {
+              "type": "video-view",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "video-view"
+            }
+          },
+          {
+            "id": "1c89a69247ddbd35",
+            "type": "leaf",
+            "state": {
+              "type": "mermaid-toolbar-view",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "mermaid-toolbar-view"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 859.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:Create new base": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "publish:Publish changes...": false,
+      "pdf-plus:PDF++: Toggle auto-copy": false,
+      "pdf-plus:PDF++: Toggle auto-focus": false,
+      "pdf-plus:PDF++: Toggle auto-paste": false,
+      "mermaid-tools:Open Mermaid Toolbar": false
+    }
+  },
+  "active": "d1fe0775e9d73f89",
+  "lastOpenFiles": [
+    "Untitled.canvas",
+    "().md",
+    "idk/entropy log.md",
+    "idk/NLP to LMs.md",
+    "Literature Notes/DeepSeek R1 - Primer.md",
+    "idk/info_dump/Better Qs as polymath.md",
+    "idk/info_dump",
+    "idk/office notes.md",
+    "idk/links 🔗.md",
+    "Literature Notes/⏳ DeepSeekMath.md",
+    "Welcome.md",
+    "2025-08-20.md",
+    "idk/assets/Pasted image 20250820234602.png",
+    "idk/assets",
+    "Blogs/Diffusion Model.md",
+    "Blogs",
+    "idk",
+    "Literature Notes/Agent-RLVR Training Software Engineering Agents via Guidance and Environment Rewards (2506.11425v2).md",
+    "Perplexity Finanace.md",
+    "images",
+    "images/Pasted image 20250705123915.png",
+    "Assets/DeepSeekMath Pushing the Limits of Mathematical Reasoning in Open Language Models (2402.03300v3).pdf",
+    "Literature Notes/✅ Word2Vec.md",
+    "Assets/Agent-RLVR Training Software Engineering Agents via Guidance and Environment Rewards (2506.11425v2).pdf",
+    "Assets/Efficient Estimation of Word Representations in Vector Space (1301.3781v3).pdf",
+    "dss.md",
+    "Untitled 2.md",
+    "Untitled 1.md",
+    "Literature Notes",
+    "Assets"
+  ]
+}
