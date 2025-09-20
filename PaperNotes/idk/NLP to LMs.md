@@ -1,3 +1,10 @@
+References
+- 🟡 [Introduction to Attention Mechanism](https://erdem.pl/2021/05/introduction-to-attention-mechanism)
+- 🚧 [Transformer FLOPs | Adam Casson](https://www.adamcasson.com/posts/transformer-flops)
+- [Transformer Inference Arithmetic | kipply's blog](https://kipp.ly/transformer-inference-arithmetic/)
+- [Speeding up the GPT - KV cache](https://dipkumar.dev/posts/gpt-kvcache/)
+
+---
 #### Experiments / Ideas
 **Exp 1: Effect of dropout layer on LMs**
 As mentioned in this [blog](https://magazine.sebastianraschka.com/i/170506328/removing-dropout) **dropout** was no longer dominating used in LLM arch and the author validated this idea by small-scale GPT-2 replication runs. 
@@ -67,6 +74,46 @@ References
 #### Sliding Window Attention
 References
 * Brief and history: [blog](https://magazine.sebastianraschka.com/i/170506328/sliding-window-attention)
+
+#### Transformers (Attention is all you need)
+**References**
+* [Transformer Explain](https://poloclub.github.io/transformer-explainer/)
+
+The key idea to understanding what novel attention bring to table is understanding what is the significance of Query, Key, and Value matrix. In additional, the logical flow which calculates the final attention score and then finally the logit score
+
+**Part 1: Intuition for Q-K-V** 
+* To understand attention it's important to understand signigicance of  Query, Key, and Value matrices. In addition, it’s important to follow the logical flow that calculates the final attention score and, ultimately, the logit score.
+
+![[Pasted image 20250914023755.png]]
+
+* The *Query* vector represents probing other tokens, i.e. given the context, which tokens are relevant to me. 
+* The _Key_ vector is “being probed” representing the information it contains.
+* Finally, the *Value* vector represents the contribution of the token if it receives attention
+$$
+\begin{gather}
+\text{Compatibility Score} = QK^{T} \\ \\
+\text{Normalised Score} = \frac{QK^{T}}{\sqrt{d_{k}}} \\ \\
+\text{Attention Weight} = \text{softmax}\!\left(\frac{QK^{T}}{\sqrt{d_{k}}}\right) \\ \\
+\text{Output} = \text{softmax}\!\left(\frac{QK^{T}}{\sqrt{d_{k}}}\right)V
+\end{gather}
+$$
+
+**Part 2: Multihead Splitting**
+```
+input token = n
+model_dim = 768
+n_head = 8
+
+X = [n, 768]
+W_k, W_q, W_v = [768, 768]
+
+=> Q = K = V = X.W = [n, 768] . [768, 768]
+
+Split amoung 8 heads = [n, 768] --> [n, 8, 96] --> [8, n, 96]
+# The above step is physically tensor reorder, it is important for BMM as it expects the batch_dim to be 1-st thereby performing independent matmul for each batch
+```
+
+**Part 3 : Logit Math**
 
 ---
 ### Sampling in LLMs
@@ -170,6 +217,76 @@ Decoding by Contrastive Layer (DoLA)
 ### Misc
 #### Width Versus Depth models
 * [blog](https://magazine.sebastianraschka.com/i/170506328/width-versus-depth)
+#### Tensor Dimensioning
+
+#### Scaling Law
+References
+* 🛑 [Transformer FLOPs | Adam Casson](https://www.adamcasson.com/posts/transformer-flops)
+* [Transformer Inference Arithmetic](https://kipp.ly/transformer-inference-arithmetic/)
+* [Scaling Laws of AI explained | Dario Amodei and Lex Fridman](https://www.youtube.com/watch?v=GrloGdp5wdc)
+* [Demis Hassabis on scaling laws: Will AI progress hit a wall? | Lex Fridman Podcast Clips](https://www.youtube.com/watch?v=raikcKu-_WI)
+* [AI can't cross this line and we don't know why](https://www.youtube.com/watch?v=5eqRuVp65eY&t=1s)
+* [Scaling laws are explained by memorization and not intelligence – Francois Chollet](https://www.youtube.com/watch?v=rl7B-LHiaNo)
+
+> **Power Law** is a functional relationship between two quantities, where a relative change in one quantity results in a relative change in the other quantity proportional to the change raised to a constant exponent
+> 
+> *“With enough training data, scaling of validation loss should be approximately a smooth power law as a function of model size.”*
+
+$$
+\begin{gather}
+\text{Power Law} \to  y = a.x^{p} \quad \forall \\
+\text{x, y : quantity under study} \quad \text{|} \quad \text{a, p : constants} \\ \\
+\text{Inverse Power Law} \to  y = a.\left( \frac{1}{x} \right)^{p} \quad \forall \quad \text{ x > 0 and p < 0} \\
+\end{gather}
+$$
+> **OpenAI Scaling Law**: _The loss scales as a power-law with model size, dataset size, and the amount of compute used for training, with some trends spanning more than seven orders of magnitude_
+> 
+> **Deepmind Scaling Law (Chinchilla)**: 
+
+<figure>
+  <img src="Pasted image 20250917214725.png" alt="Scaling laws">
+  <figcaption style="font-size: 0.9em; color: grey; text-align: center;">
+    The author pre-trained LLM with scaled upto 1.5B parameters over WebText2Corpurs. All models are trained using a fixed context length of 1,024 tokens and a standard next token prediction (cross-entropy) loss
+  </figcaption>
+</figure>
+
+Non-embedding Parameters: 
+
+**Scaling Law Plots**
+Power law plots may look impressive at first glance, but it’s important to remember that they’re usually shown on a log-log scale. When converted back to a normal scale, power law decay looks a lot like exponential decay. This creates a misleading intuition: it seems as if LLM quality improves exponentially with more compute, when in fact the gains are much slower..
+<figure>
+  <img src="Pasted image 20250918003236.png" alt="Power Law Decay vs Exponential Decay">
+  <figcaption style="font-size: 0.9em; color: grey; text-align: center;">
+Power Law Decay vs Exponential Decay
+  </figcaption>
+</figure>
+On linear axes, the curves suggest that more compute leads to ever-faster drops in loss, similar to exponential decay. But in reality, improvements obey a power law: each doubling of compute, data, or parameters only reduces test loss by a small fixed percentage. The result is that the curve flattens quickly far faster than an exponential process would so scaling gives diminishing returns much sooner than the log-log plots imply.
+
+**Activation Checking Point**
+* During NN training, it perform forward and backward pass. To perform backpropagation model needs to remember the intermediate calculations it made during the forward pass, which are called activations. 
+* For massive model (billions of parameter) storing these can take up a lot of space on GPU, hence, to save on memory "activation checkpoint" is used. This method essentially save a few key checkpoints, while discarding the rest.
+* When the model needs the activations, it re-computes wrt to closed checkpoint. This process of re-computation is called rematerialisation. This process is an issue as it inflated the hardware FLOPs utilisation (HFU), while the effective FLOPS is much lesser
+
+**Model FLOPs Utilization (MFU)**
+* MFU was propose in Google's PaLM paper, another paradigm to measure training efficiency of model. 
+$$
+\begin{gather}
+\text{MFU} = \frac{CD}{P} \\[6pt]
+\text{C : model's FLOPs per token} \\
+\text{D : observed tokens per second} \\
+\text{P : theoretical peak FLOPS}
+\end{gather}
+$$
+```
+# For example: using the fp16/bf16 formats an A100 has a theoretical peak of 312 teraFLOPS
+# Let 
+	- FLOPS(forward + backward) = 6N
+	- no. of parameters = 125M
+	- throughput = 200k
+
+=>  MFU = (6⋅125×10^6)⋅(200×10^3) / (312 x 10^12) = 0.48 ~ 48%
+```
+
 
 
 

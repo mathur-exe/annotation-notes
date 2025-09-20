@@ -1,4 +1,18 @@
-### 27 Aug 2025 | Wednesday
+###### Week 38 (13 - 21 Sept '25)
+
+
+---
+###### 10th Sept 2025 | Wednesday
+#GPT_conv How do tokenizer work for arithmetic tasks, and what diff does R2L & L2R tokenization when dealing with numbers
+* Ref: [How Tokenization Impacts Arithmetic in LLMs (Huggingface)](https://huggingface.co/spaces/huggingface/number-tokenization-blog)
+* Context: a year match people spot the inability of LLMs to answers questions like "Which is greater 9.9 or 9.11"
+---
+###### 6th Sept 2025 | Saturday
+#TODO System Thinking 
+References: [Gemini Chat](https://g.co/gemini/share/59fccb85b742)
+
+---
+###### 27 Aug 2025 | Wednesday
 In the past week [Will Brown | Twitter]() and others from [Prime Intellect]() had been posting about hiring folks for RL and there want to [built RL env for LLM](https://x.com/willccbb/status/1958320053772009678) to leverage for post training, which made me curious as to how there env are leveraged by language model, and saw community create rl env for specific benchmark which I think is kinda ... cheat but turn out i was wrong (not surprised, lol). Then what's the real purpose of converting benchmark dataset into RL env
 
 By converting static dataset from benchmark to interactive task with rewards lets the model think step-by-step, call tools, and then scores the intermediate and final answer. Take for example [AIME 2025](https://github.com/PrimeIntellect-ai/prime-environments/tree/main/environments/aime2025) which has been converted to task loop
@@ -26,9 +40,8 @@ In LLM fine-tuning the mode is taught to answer a certain way, RL Post Training 
 [Evaluation Environments + Metrics]
 ```
 
-
 ---
-### 25 Aug 2025 | Monday
+###### 25 Aug 2025 | Monday
 > #life_os When reading something new, you’d like a way to digest knowledge directly in the short term—capturing the flow of the text (how the argument develops, how ideas link), and making “on-the-fly” connections so you can use it immediately without first waiting to ingest it into your second brain.
 
 The challenges in this problem are
@@ -63,7 +76,7 @@ And here is the manual template for practice
 > Here, the principles are operating system while
 > manual template is a notebook tool
 ---
-### 23 Aug 2025 | Saturday
+###### 23 Aug 2025 | Saturday
 I finished reading the first book of the science fiction series Three-Body Problem, which looking for the 2nd book in series : The Dark Forest, I came to know that the first book in series (titled the same) won't the [Hugo Award for Best Novel](https://en.wikipedia.org/wiki/Hugo_Award_for_Best_Novel). The reasoning for this mention is to (1) The genre of book which receive this aware, (2) Credibility of this award and (3) Which are the other prestigious award in literature or this genre which can help me find books to read (higher SNR)
 #### Obsidian shortcuts
 * Cmd + E → Toggle between edit and preview modes
@@ -76,7 +89,7 @@ I finished reading the first book of the science fiction series Three-Body Probl
 #### Primer to Vim -> #TODO 
 
 ---
-### 21 Aug 2025
+###### 21 Aug 2025
 When trying to understand the improved in GPT-OSS model from GPT-2 and the key improvements which have been made like attention sink and MXFP4, their details talked about in this [twitter post](https://x.com/carrigmat/status/1952779877569978797) and i've elaborated further in [[NLP to LMs]]
 
 Order of derivative in differential calculus are First, Second, Third
@@ -100,7 +113,7 @@ While reading through this blog: [From GPT-2 to gpt-oss | Sebastian Raschka](htt
 * Physicist -> world model -> quant: [ChatGPT Thread](https://chatgpt.com/s/t_68ab7cd2b4248191be76636159dbc4e8)
 * DSA & Interview Prep:
 ---
-### 20 Aug 2025
+###### 20 Aug 2025
 #### Weekly Planning
 Reference: [The Secret of the Weekplan (Calvin French Owen)](https://calv.info/the-secret-of-the-weekplan)
 ![[Pasted image 20250820234602.png]]
@@ -120,10 +133,8 @@ Additional tatics for dealing with unknowns & blockers are
 * Pair Review
 * Convert unknowns into questions -> [Moving towards a question | Lesswrong](https://www.lesswrong.com/posts/RsrSk7meksPvqsG8S/moving-towards-a-question-based-planning-framework-instead)
 
-#### System Thinking | [Gemini Chat](https://g.co/gemini/share/59fccb85b742) -> #TODO
-
 ---
-### 17 Aug 2025
+##### 17 Aug 2025
 #### Game, Set, Maths | [YouTube](https://www.youtube.com/shorts/DQuaVtqTC8o)
 The "Win by Two" Rule and Deuce
 * The most fundamental mathematical quirk in tennis is the need to win by a margin of two. At every level - game or set the player must win by at least two points. 
@@ -132,8 +143,12 @@ The "Win by Two" Rule and Deuce
 	* This "win by two" is a core mechanic that prevents a player with a slight, temporary advantage from easily winning. 
 * Reference and TODO: How to use this probability in gambling in games like *Dream11*, continue using this [Gemini Chat | 2.5 Pro](https://g.co/gemini/share/21fb8899d64b)
 ---
-### 16 Aug 2025
-#### Design of Airpods (Real Engineering) | [YouTube](https://youtu.be/PB_8dGKh9JI?si=Vrpv9zQ9EvzaGxSf)  -> #TODO
+##### 16 Aug 2025
+#### Design of Airpods (Real Engineering) -> #TODO
+Reference
+- [YouTube](https://youtu.be/PB_8dGKh9JI?si=Vrpv9zQ9EvzaGxSf)
+- [ChatGPT Thread](https://chatgpt.com/c/68a0a735-9264-8332-a9cf-74feff7441e6?model=gpt-5)
+- [Gemini Thread](https://gemini.google.com/u/1/app/9139a28f0e04bd32)
 ##### Directional Sound capture
 * Airpod have 2 microphones which enable selectivity and higher clarity in vocal input to the earphones. This technology is called beamforming where 2 microphones are physically separated (one at the bottom of the stem and another higher up) are used to isolating speech and filtering out the distracting background noise, making for a much better conversation.
 * Though it is important to note that more mic ≠ magic: directionality comes from differences between mic signals: tiny time delays (TDOA - time difference of arrival) and level differences (ILD - inter-microphone level differences). AirPods exploit both, with a few millimetres of spacing between mics.
