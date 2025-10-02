@@ -1,27 +1,28 @@
 #### LLM101
 (new) KV Cache, RadixAttention (ref [SGLang Arch | HF](https://huggingface.co/blog/paresh2806/sglang-efficient-llm-workflows#1-smarter-memory-management-with-radixattention))
-
 Decoding Strategy (P1)
-
 Tokenisation (P1)
 - [HF Tokenization](https://huggingface.co/spaces/huggingface/number-tokenization-blog)
 - [Word2Vec (TensorFlow)](https://www.tensorflow.org/text/tutorials/word2vec)
 
 Transformer Notes (review)
-- notion —> obsidian >> qkv significance
+- ✅ notion —> obsidian >> qkv significance
 - [Introduction to attention mechanism](https://erdem.pl/2021/05/introduction-to-attention-mechanism)
 -  annotated transformer
-- [https://www.adamcasson.com/posts/transformer-flops](https://www.adamcasson.com/posts/transformer-flops)
-- [https://kipp.ly/transformer-inference-arithmetic/](https://kipp.ly/transformer-inference-arithmetic/)
+- [~~https://www.adamcasson.com/posts/transformer-flops~~](https://www.adamcasson.com/posts/transformer-flops)
+- [~~https://kipp.ly/transformer-inference-arithmetic/~~](https://kipp.ly/transformer-inference-arithmetic/)
 
 Positional Encoding (P2)
 - [https://huggingface.co/blog/designing-positional-encoding](https://huggingface.co/blog/designing-positional-encoding)
 - [https://erdem.pl/2021/05/understanding-positional-encoding-in-transformers](https://erdem.pl/2021/05/understanding-positional-encoding-in-transformers)
 
 KV Cache
-- [https://dipkumar.dev/posts/gpt-kvcache/](https://dipkumar.dev/posts/gpt-kvcache/)
-* [Scaling Laws for LLMs: From GPT-3 to o3 | Cameron R. Wolfe](https://cameronrwolfe.substack.com/p/llm-scaling-laws)
-* [Language Model Training and Inference: From Concept to Code | Cameron R. Wolfe](https://cameronrwolfe.substack.com/p/language-model-training-and-inference?open=false#%C2%A7understanding-next-token-prediction)
+
+---
+
+- [~~https://dipkumar.dev/posts/gpt-kvcache/~~](https://dipkumar.dev/posts/gpt-kvcache/)
+* ✅ [Scaling Laws for LLMs: From GPT-3 to o3 | Cameron R. Wolfe](https://cameronrwolfe.substack.com/p/llm-scaling-laws)
+* ✅ [Decoder-Only Transformers: The Workhorse of Generative LLMs](https://cameronrwolfe.substack.com/p/decoder-only-transformers-the-workhorse)
 * [GPT-oss from the Ground Up | Cameron R. Wolfe](https://cameronrwolfe.substack.com/p/gpt-oss?utm_source=profile&utm_medium=reader2)
 * [The Unreasonable Effectiveness of Recurrent Neural Networks](https://karpathy.github.io/2015/05/21/rnn-effectiveness/)
 * [RNN Cheatsheet | CS230](https://stanford.edu/~shervine/teaching/cs-230/cheatsheet-recurrent-neural-networks)
@@ -48,6 +49,9 @@ KV Cache
 
 ---
 ##### Week 38 - Sept '25
+* [ChatGPT: How to structure agentic ai repository](https://chatgpt.com/s/t_68cf05f08cfc8191b7584f3876f84551)
+* [Prompt Templates | LangChain](https://python.langchain.com/docs/concepts/prompt_templates)
+
 Other Reads
 * [Improving Cursor Tab With RL | Cursor](https://cursor.com/blog/tab-rl)
 * [1.5x Faster MoE Training | Cursor](https://cursor.com/blog/kernels)

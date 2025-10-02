@@ -47,23 +47,11 @@ $$
 
 #### Mixture of Experts -> [Visual Guide to MoE](https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-mixture-of-experts)
 
-#### Normalization 
-Q] Which normalization method was used in original Transformer architecture and why?
-* BatchNorm was used in the original transformer paper because __
-* While BN had it's advantages, BN was harder to parallelize efficiently (due to the mean and variance batch statistics) and performs poorly with small batch sizes.
-* 
-##### RMSNorm
-Q] What is RMSNorm
-Q] How does it compare (similar) to LayerNorm -> [Ref image in section of blog](https://magazine.sebastianraschka.com/i/170506328/rmsnorm-replaces-layernorm)
-
+### Components of Transformer
 #### Cold Start in SFT 
 #DeepSeek Cold starts means seeding the training process with a small dataset of CoT examples before scaling up with RL and synthetic data. This essential in because directly jumping to RL on pre-trained base model produces unreadable and hard to verify CoT reasoning. Hence, deepseek collected small high-quality CoT dataset was used to do SFT on base model, this method produces an interim model that knows how to produce structured, human-readable reasoning steps.
 
 In life-cycle of R1, the R1-zero is directly RL-ed on base model to create a model which produces CoT reasoning and discovers reasoning behaviour (though these CoT traces are messy and non-readable) and then additional interm model is build using cold start. Finally the combination interm model + R1-zero are used to synthesis the huge CoT corpus (via rejection sampling and filtering) for R1
-
-#### Tokenisation
-
-#### Generation configurations
 
 ---
 ### Types of Attention Mechanims
@@ -75,7 +63,7 @@ References
 References
 * Brief and history: [blog](https://magazine.sebastianraschka.com/i/170506328/sliding-window-attention)
 
-#### Transformers (Attention is all you need)
+### Transformers (Attention is all you need)
 **References**
 * [Transformer Explain](https://poloclub.github.io/transformer-explainer/)
 
@@ -114,6 +102,63 @@ Split amoung 8 heads = [n, 768] --> [n, 8, 96] --> [8, n, 96]
 ```
 
 **Part 3 : Logit Math**
+
+#### Normalization 
+###### Batch Norm vs Layer Norm
+The reasoning for using any type of normalization methods is to normalize the activation values between each matrix multiplication, allowing activation values to remain stable over time. The two standard method for normalization are (1) Batch Normalization and (2) Layer Normalization
+$$
+\begin{gather}
+\hat{a} = \frac{a \\ - \\ \mu}{\sigma} \quad \forall \quad \mu, \sigma \quad \text{are mean and stand deviation}
+\end{gather}
+$$
+**Batch Normalization**: It computes per-dimension mean and standard deviation over the entire mini-batch (across batch). Although this works well, it's limited by the fact that we must process a sufficiently large mini-batch of inputs to get a reliable estimate of the mean and variance. This becomes an issue during inference, where processing only a small number of input
+
+**Layer Normalization**, on the other hand LN compute mean & SD over final dim of the input (across features), i.e. in-case of decoding-only transformer it's the embedding dimension. 
+
+![[Pasted image 20250928145122.png]]
+
+> During normalization, activations are standardized using their mean and standard deviation: 
+> * mean: tells the offset of the activation 
+> * standard deviation: spread out the activations. 
+> 
+> Hence, by normalising to zero mean and unit SD, we ensure predictable offsets and scales so each neuron’s signal lives in a stable numeric range
+
+###### RMSNorm
+
+Q] What is RMSNorm
+Q] How does it compare (similar) to LayerNorm -> [Ref image in section of blog](https://magazine.sebastianraschka.com/i/170506328/rmsnorm-replaces-layernorm)
+
+**Compare: LayerN vs RMSNorm**
+LayerNorm across H-dim
+$$
+\begin{align}
+\mu &= \frac{1}{H} \sum_{i=1}^{H} x_i, 
+& \sigma^2 &= \frac{1}{H} \sum_{i=1}^{H} (x_i - \mu)^2 \\
+\hat{x}_i &= \frac{x_i - \mu}{\sqrt{\sigma^2 + \varepsilon}}, 
+& y_i &= \gamma_i \hat{x}_i + \beta_i
+\end{align}
+$$
+RMSNorm
+$$
+\begin{align}
+\text{RMS} &= \sqrt{\frac{1}{H} \sum_{i=1}^{H} x_i^2 + \varepsilon}, 
+& y_i &= \gamma_i \frac{x_i}{\text{rms}}
+\end{align}
+$$
+
+
+#### Positional Embedding
+**Absolute Positional Encoding**: This methods uses additive techniques to inject absolute position of token into the input sequence. Although simple, it limits the model’s ability to generalise to sequences longer than those seen during training
+
+**Relative Positional Encoding**: This methods improved upon APE by considering distance between the tokens rather than their absolute positions
+
+**Rotary Positional Encoding**
+[RoPE: math & implementation | GitHub](https://github.com/aju22/RoPE-PyTorch/blob/main/RoPE.ipynb)
+* RoPE are hybrid of absolute and relative positional embeddings that incorporate position into self-attention by 
+	1. encoding absolute positional into rotating matrix, i.e.
+	2. adding relative position information directly into the self-attention operation. 
+* RoPE injects positional information at every layer of the transformer rather than just input sequence. This approach balances absolute and relative positional encoding, thereby better results for longer sequence and decaying inter-token dependency as the relative positional increases
+> RoPE is technique used in transformer-based models to incorporate positional information into token representation. Unlike traditional positional embedding which use sin & cosine fn, RoPE utilizes rotating matrix to encode both absolute and relative positional information
 
 ---
 ### Sampling in LLMs
@@ -215,10 +260,6 @@ Decoding by Contrastive Layer (DoLA)
 
 ----
 ### Misc
-#### Width Versus Depth models
-* [blog](https://magazine.sebastianraschka.com/i/170506328/width-versus-depth)
-#### Tensor Dimensioning
-
 #### Scaling Law
 References
 * 🛑 [Transformer FLOPs | Adam Casson](https://www.adamcasson.com/posts/transformer-flops)
@@ -239,10 +280,9 @@ $$
 \text{Inverse Power Law} \to  y = a.\left( \frac{1}{x} \right)^{p} \quad \forall \quad \text{ x > 0 and p < 0} \\
 \end{gather}
 $$
-> **OpenAI Scaling Law**: _The loss scales as a power-law with model size, dataset size, and the amount of compute used for training, with some trends spanning more than seven orders of magnitude_
-> 
-> **Deepmind Scaling Law (Chinchilla)**: 
-
+**Chinchilla builds upon OpenAI's scaling law**
+* *OpenAI's scaling law* discovered test loss as power law wrt parameters, dataset size, and compute. But in their experiment, they had fixed the dataset size (300B tokens), hence, they had model which were undertrained (not enough data to saturate their capacity)
+* *Chinchilla* took this forward by varying parameters and dataset size across wide range. They concluded on same scaling law, and propose compute-optimal regime requiring balanced parameters and data
 <figure>
   <img src="Pasted image 20250917214725.png" alt="Scaling laws">
   <figcaption style="font-size: 0.9em; color: grey; text-align: center;">
@@ -267,6 +307,13 @@ On linear axes, the curves suggest that more compute leads to ever-faster drops 
 * For massive model (billions of parameter) storing these can take up a lot of space on GPU, hence, to save on memory "activation checkpoint" is used. This method essentially save a few key checkpoints, while discarding the rest.
 * When the model needs the activations, it re-computes wrt to closed checkpoint. This process of re-computation is called rematerialisation. This process is an issue as it inflated the hardware FLOPs utilisation (HFU), while the effective FLOPS is much lesser
 
+**Is scaling slowing down?**
+Scaling laws define a relation based on power law, which is often misunderstood as exponential performance improvements from logarithmic increases in compute. Scaling laws look more like an exponential decay, meaning that we will have to work harder over time to get further performance improvements
+
+> _Practitioners often use downstream benchmark accuracy as a proxy for model quality and not loss on perplexity evaluation sets_
+* Perplexity (test-loss) is the scaling law metric, which measures model's performance on unseen data. A low perplexity, suggests model assigns high probability to the correct next tokens. And downstream benchmarks, measure task specific accuracies
+* While model can improve slightly on perplexity, those gains might not translate into meaningful accuracy gains on downstream tasks. Hence practitioners skip obsessing over perplexity
+
 **Model FLOPs Utilization (MFU)**
 * MFU was propose in Google's PaLM paper, another paradigm to measure training efficiency of model. 
 $$
@@ -286,6 +333,12 @@ $$
 
 =>  MFU = (6⋅125×10^6)⋅(200×10^3) / (312 x 10^12) = 0.48 ~ 48%
 ```
+#### Width Versus Depth models
+* [blog](https://magazine.sebastianraschka.com/i/170506328/width-versus-depth)
+#### Tensor Dimensioning
+
+#### Related by diff -> Multiquery Attention & KV Cache
+
 
 
 
