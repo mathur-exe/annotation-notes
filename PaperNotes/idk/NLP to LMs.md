@@ -1,4 +1,4 @@
-References
+**References**
 - 🟡 [Introduction to Attention Mechanism](https://erdem.pl/2021/05/introduction-to-attention-mechanism)
 - 🚧 [Transformer FLOPs | Adam Casson](https://www.adamcasson.com/posts/transformer-flops)
 - [Transformer Inference Arithmetic | kipply's blog](https://kipp.ly/transformer-inference-arithmetic/)
@@ -12,34 +12,62 @@ As mentioned in this [blog](https://magazine.sebastianraschka.com/i/170506328/re
 Exp 2: 
 
 ---
-### Tokenisation
-[Summary of Tokenizers | HuggingFace](https://huggingface.co/docs/transformers/tokenizer_summary)
-The choice of tokeniser for model is like adjusting 3 knobs : (1) statistical objective at training, (2) operational constraints like speed, implementation, etc. (3) Dataset & LM needs (monolingual or multi-lingual). [ChatGPT](https://chatgpt.com/s/t_68af7918006c8191bea20802463dd6cf)
-* Largely GPT (and autoregressive models) use BPE as these model train on large web-scale corpus . For such use cases BPE is simple and easier to train. The intuition for fit generatation, i.e. BPE tends to merge create tokens which are frequent form.
+### 🧠 Tokenization
 
-#### Byte-Pair Encoding (BPE)
-> This method of tokenization is widely used is decoding only ( and GPT) models because they guarantees every possible character can be represented
+📘 Reference: 
+* [Summary of Tokenizers | HuggingFace](https://huggingface.co/docs/transformers/tokenizer_summary)
+* [ChatGPT](https://chatgpt.com/s/t_68af7918006c8191bea20802463dd6cf)
 
-**Training Algorithm**
-BPE is trained by merging the subwords with highest frequency. The training starts by tokenising at character level and recording the frequency of each letter, and then iteratively merging them until the vocabulary size is achieved
-> Clever trick used by GPT-2 and RoBERT was to write words in bytes instead of Unicode char, with this pretty trick every character is included in vocabulary and we don't have unknown tokens
+The choice of tokenizer in a language model is like adjusting three dials:
+1. Statistical objective — how subwords are formed during training.
+2. Operational constraints — speed, implementation simplicity, and memory.
+3. Dataset characteristics — whether it’s monolingual or multilingual.
 
-**FAQ**
-Q] What defines the stopping criteria for merging process in BPE training?
-A]
+> GPT-style autoregressive models typically use BPE since it scales easily on web-sized corpora and guarantees that common patterns merge efficiently.
 
-#### WordPiece
-> This method of tokenisation is used in encoder only models like BERT is the scoring method. WP's scoring method better reflects how well the vocabulary explains the corpus because <explain_formula> and it uses continuation markers. Hence, for masked bidirectional encoders, it create cleaner signals
+#### 🔡 Byte-Pair Encoding (BPE)
+> BPE is a subword tokenization method used primarily in decoder-only models like GPT. It ensures that every character can be represented — a critical feature for open-vocabulary text generation.
 
-**Learning Process**: Similar to BPE it merges token selection through an objective which considers both change in probability distribution with adding a subword and frequency of the tokens
-**Objective**: It's training is motivated by maximising the likelihood i.e. it prefers subwords that improve the model’s ability to represent the corpus compactly in a probabilistic sense. Hence, as a result it doesn't merge tokens greedily rather it uses the below formula
-**Implementation**: GitHub Link
+**🧩 Training Algorithm**
+BPE starts by splitting text into characters and iteratively merging the most frequent adjacent symbols until the target vocabulary size is reached.
 
-WordPiece tokenises greedily (with continuation marks) and then uses the `scoring function` for each pair. And by dividing the frequency of the pair by the product of the frequencies of each of its parts, the algorithm prioritizes the merging of pairs where the individual parts are less frequent in the vocabulary
+```Example
+t h e _ c a t  →  t h e_ c a t  →  the_ c a t  →  the_ cat  →  the_cat
+```
+
+> GPT-2 and RoBERTa Trick:
+> Instead of using Unicode characters, they tokenize text into bytes, ensuring every possible symbol (including emojis and punctuation) is representable — no “unknown tokens.”
+
+**❓ FAQ**
+> Q] What defines the stopping criteria for merging process in BPE training? 
+> A]
+
+#### 🧱 WordPiece
+> Used in **encoder-only** models like BERT, WordPiece improves upon BPE by introducing a probabilistic objective and continuation markers (e.g., ##ing) that help masked models learn cleaner token boundaries.
+
+**⚙️ Learning Process**
+WordPiece merges tokens based on how much each potential merge improves the model’s ability to represent the corpus probabilistically, and not just on raw frequency
+
+**🎯 Objective**: 
+The merge score for a token pair is calculated as:
 $$
-\text{score} = \frac{\text{freq\_of\_pair}}{\text{freq\_of\_first\_element} \times \text{freq\_of\_second\_element}}
-$$
 
+\text{score} = \frac{\text{freq}_{\text{pair}}}{\text{freq}_{\text{first}} \times \text{freq}_{\text{second}}}
+
+$$
+This favors pairs that co-occur frequently but are individually rare, producing subwords that carry high semantic information
+
+> Unlike BPE, WordPiece doesn’t merge greedily; it balances frequency with statistical fit to maximize corpus likelihood
+
+**🧪 Implementation**: 
+* GitHub Link
+* WordPiece tokenizes greedily using continuation markers and applies the above scoring function during vocabulary construction
+
+> **Summary:**
+> - BPE is frequency driven — fast & deal for generative models.
+> - WordPiece is probability-driven — better for encoders and bidirectional contexts.
+> 
+> Both converge on the goal of compressing text into subword units that optimize expressiveness and efficiency
 ---
 #### Activation Function in Feed forward NN -> [ref blog](https://magazine.sebastianraschka.com/i/170506328/swishswiglu-replaces-gelu)
 1. GeLU
@@ -161,33 +189,54 @@ $$
 > RoPE is technique used in transformer-based models to incorporate positional information into token representation. Unlike traditional positional embedding which use sin & cosine fn, RoPE utilizes rotating matrix to encode both absolute and relative positional information
 
 ---
-### Sampling in LLMs
-Ref_1: [Dummy's Guide to Modern LLM Sampling](https://rentry.org/samplers)
-Ref_2: [Grammar-Based Sampling Quick Summary](https://michaelgiba.com/grammar-based/index.html)
-Ref_3: [llm_samplers_explained.md](https://gist.github.com/kalomaze/4473f3f975ff5e5fade06e632498f73e#file-llm_samplers_explained-md)
+### 🎲 Sampling in LLM
 
-##### General Terms
-1. Logits: raw, unnormalized scores output by the model for each token in its vocabulary
-2. Softmax:
-3. Entropy:
-4. Perplexity: related to entropy; perplexity measures how "surprised" the model is by the text. Lower perplexity indicates higher confidence.
-5. n-gram: contiguous sequence of n tokens
-6. Context Window
-7. Probability distribution
+📘 References:
+* [Dummy's Guide to Modern LLM Sampling](https://rentry.org/samplers)
+* [Grammar-Based Sampling Quick Summary](https://michaelgiba.com/grammar-based/index.html)
+* [llm_samplers_explained.md](https://gist.github.com/kalomaze/4473f3f975ff5e5fade06e632498f73e#file-llm_samplers_explained-md)
+
+#### 🧭 General Terms
+| Term                     | Meaning                                                                                        |
+| ------------------------ | ---------------------------------------------------------------------------------------------- |
+| Logits                   | raw, unnormalized scores output by the model for each token.                                   |
+| Softmax                  | converts logits into probabilities that sum to 1                                               |
+| Entropy                  | - Measures uncertainty in the distribution<br>- high entropy → more randomness.                |
+| Perplexity               | - related to entropy<br>- Measures how “surprised” the model is by text. <br>- Lower is better |
+| n-gram                   | contiguous sequence of n tokens                                                                |
+| Context Window           |                                                                                                |
+| Probability distribution | resulting token likelihoods after softmax<br>                                                  |
 
 #### How LLM generates text
->Tokenization  ([[NLP to LMs#Tokenisation]] ) methodolgy have been discussed above, hence, we'll only look at how language model generate text. 
+>Tokenization  ([[NLP to LMs#Tokenisation]] ) prepares input text into tokens.
+>At each step, the model predicts a probability distribution over the vocabulary for the next token. 
 
-For each position, the model calculates the probability distribution over all possible next tokens in its vocabulary. Then through a process of selection, model must choose one token from this distribution to add to the growing text, this process is called Sampling and it is the practice of introducing controlled randomness.
+Then, through sampling, one token is chosen according to this probability distribution; introducing controlled randomness
 
-#### GenerationConfig
-Ref_1: [Generation configurations: temperature, top-k, top-p, and test time compute](https://huyenchip.com/2024/01/16/sampling.html)
-Ref_2: [HF](https://huggingface.co/docs/transformers/main/main_classes/text_generation)
-There are the parameters to manipulation the model output logits
-1. `temperature`: it controls the randomness in probability distribution by scaling logits before softmax. The below formula the logits $z_i$ by temperature $T$ in the softmax formula
-		$$
-			p_i = \frac{\exp(z_i / T)}{\sum_j \exp(z_j / T)}
-		$$
+```text
+repeat until [EOS]:
+    p = model(next_token_probs)
+    next_token = sample_from(p)
+    output.append(next_token)
+```
+
+#### ⚙️ Generation Config
+📘 References: 
+* [Generation Configurations | Huyen Chip (2024)](https://huyenchip.com/2024/01/16/sampling.html)
+* [Hugging Face Docs: text_generation](https://huggingface.co/docs/transformers/main/main_classes/text_generation)
+
+These parameters manipulate the output logits before sampling
+1. `temperature`
+	* Controls randomness by scaling logits before the softmax
+	* T < 1 → more deterministic.
+	* T (> 1) → more diverse and creative generations
+
+$$
+p_i = \frac{e^{z_i / T}}{\sum_j e^{z_j / T}}
+$$
+
+
+
 2. `top_k`: Hard-truncate to K tokens with highest logits and everything else gets filtered. 
 	$$
 		\tilde{z}_i = 
