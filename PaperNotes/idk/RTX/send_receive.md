@@ -4,4 +4,5 @@
 - 28/11 [Agent Design Is Still Hard](https://lucumr.pocoo.org/2025/11/21/agents-are-hard/)
 - 28/11 [LLM APIs are a Synchronization Problem](https://lucumr.pocoo.org/2025/11/22/llm-apis/)
 - 28/11 [Why aren't smart people happier? | Medium](https://www.theseedsofscience.pub/p/why-arent-smart-people-happier)
+- 29/11 [Build to Last | fast.ai](https://www.fast.ai/posts/2025-10-30-build-to-last.html)
 
