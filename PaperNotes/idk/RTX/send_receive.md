@@ -1,3 +1,6 @@
+##### Week 49 (1st - 7th)
+- get(Printable Calendar)
+
 ##### Week 48 (27th - 30th)
 - #read [Think in Math. Write in Code](https://www.jmeiners.com/think-in-math/)
 - 28/11 [From Async/Await to Virtual Threads](https://lucumr.pocoo.org/2025/7/26/virtual-threads/)
