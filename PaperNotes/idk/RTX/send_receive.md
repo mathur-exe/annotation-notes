@@ -1,3 +1,16 @@
+```
+[mcp_servers.deepwiki]
+command = "npx"
+args = ["-y", "mcp-remote@latest", "https://mcp.deepwiki.com/sse"]
+
+[mcp_servers.github]
+command = "npx"
+args = ["-y", "mcp-remote@latest", "https://api.githubcopilot.com/mcp", "--header", "Authorization:${GITHUB_MCP_PAT}"]
+
+[mcp_servers.github.env]
+GITHUB_MCP_PAT = "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"
+```
+
 ##### Week 49 (1st - 7th)
 - get(Printable Calendar)
 
