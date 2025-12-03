@@ -11,6 +11,13 @@ args = ["-y", "mcp-remote@latest", "https://api.githubcopilot.com/mcp", "--heade
 GITHUB_MCP_PAT = "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"
 ```
 
+---
+
+```
+```
+
+---
+
 ##### Week 49 (1st - 7th)
 - get(Printable Calendar)
 
