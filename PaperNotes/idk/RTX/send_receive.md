@@ -1,4 +1,5 @@
 ##### Week 49 (1st - 7th)
+- Info on inference latency in langgraph: https://gist.github.com/mathur-exe/4e5a9dc685e56900eacdb780e32e24f8
 - get(Printable Calendar)
 
 ##### Week 48 (27th - 30th)
