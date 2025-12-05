@@ -1,4 +1,6 @@
 ##### Week 49 (1st - 7th)
+- Skills in Codex: https://github.com/openai/codex/blob/main/docs/skills.md
+- other AGENTS.md: https://gist.github.com/search?q=AGENTS.MD
 - Info on inference latency in langgraph: https://gist.github.com/mathur-exe/4e5a9dc685e56900eacdb780e32e24f8
 - get(Printable Calendar)
 
