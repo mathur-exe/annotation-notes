@@ -3,6 +3,7 @@
 - [From DeepSeek v3 to v3.2 | Sebastian Raschka](https://magazine.sebastianraschka.com/p/technical-deepseek)
 - (maybe) [GRPO's new variants and implementation secrets | Nathan Lambert (YouTube)](https://youtu.be/amrJDwMUFNs?si=jUYxlD02If9cVlf0)
 - [Continuous Batching | HuggingFace (Gemini)](https://gemini.google.com/share/4f268ad0e1ae)
+- [Reasoning Effort Modulation | ChatGPT](https://chatgpt.com/s/t_6937198c7f60819181281c3f3a1cbb5e)
 
 ##### Week 49 (1st - 7th)
 - Skills in Codex: https://github.com/openai/codex/blob/main/docs/skills.md
