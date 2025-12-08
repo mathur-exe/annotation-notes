@@ -1,5 +1,6 @@
 ##### Week 50 (8th - 14th)
 - [Making Sense of Memory in AI Agents | Leonie Monigatti](https://www.leoniemonigatti.com/blog/memory-in-ai-agents.html)
+- [From DeepSeek v3 to v3.2 | Sebastian Raschka](https://magazine.sebastianraschka.com/p/technical-deepseek)
 
 ##### Week 49 (1st - 7th)
 - Skills in Codex: https://github.com/openai/codex/blob/main/docs/skills.md
