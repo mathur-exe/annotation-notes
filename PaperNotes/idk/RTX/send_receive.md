@@ -1,3 +1,6 @@
+##### Week 50 (8th - 14th)
+- [Making Sense of Memory in AI Agents | Leonie Monigatti](https://www.leoniemonigatti.com/blog/memory-in-ai-agents.html)
+
 ##### Week 49 (1st - 7th)
 - Skills in Codex: https://github.com/openai/codex/blob/main/docs/skills.md
 - other AGENTS.md: https://gist.github.com/search?q=AGENTS.MD
