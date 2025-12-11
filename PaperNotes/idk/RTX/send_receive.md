@@ -1,6 +1,7 @@
 ##### Week 50 (8th - 14th)
 12/12
 - [From Async/Await to Virtual Threads ](https://lucumr.pocoo.org/2025/7/26/virtual-threads/)
+- [Agent Design Is Still Hard](https://lucumr.pocoo.org/2025/11/21/agents-are-hard/)
 
 11/12
 - #SAR [SARLO-80: Worldwide Slant SAR Language Optic Dataset at 80 cm Resolution | HF](https://huggingface.co/blog/Solene27/sarlo-80-slant-sar-language-optic-dataset)
