@@ -1,4 +1,7 @@
 ##### Week 50 (8th - 14th)
+- #SAR [SARLO-80: Worldwide Slant SAR Language Optic Dataset at 80 cm Resolution | HF](https://huggingface.co/blog/Solene27/sarlo-80-slant-sar-language-optic-dataset)
+- #SAR [Detecting Beyond Sight: Building AI-Enabled SAR Intelligence with Synthetic Data | HF](https://huggingface.co/blog/DualityAI-RebekahBogdanoff/ai-enabled-sar-intelligence-synthetic-data)
+- [Custom instructions with AGENTS.md | OpenAI](https://developers.openai.com/codex/guides/agents-md)
 - [Making Sense of Memory in AI Agents | Leonie Monigatti](https://www.leoniemonigatti.com/blog/memory-in-ai-agents.html)
 - [From DeepSeek v3 to v3.2 | Sebastian Raschka](https://magazine.sebastianraschka.com/p/technical-deepseek)
 - (maybe) [GRPO's new variants and implementation secrets | Nathan Lambert (YouTube)](https://youtu.be/amrJDwMUFNs?si=jUYxlD02If9cVlf0)
