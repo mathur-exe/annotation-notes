@@ -1,18 +1,17 @@
 ##### Week 50 (8th - 14th)
-12/12
-- [From Async/Await to Virtual Threads ](https://lucumr.pocoo.org/2025/7/26/virtual-threads/)
-- [Agent Design Is Still Hard](https://lucumr.pocoo.org/2025/11/21/agents-are-hard/)
+- [12/12] [From Async/Await to Virtual Threads ](https://lucumr.pocoo.org/2025/7/26/virtual-threads/)
+- [12/12] [Agent Design Is Still Hard](https://lucumr.pocoo.org/2025/11/21/agents-are-hard/)
+- [12/12] [LLM APIs are a Synchronization Problem](https://lucumr.pocoo.org/2025/11/22/llm-apis/)
 
-11/12
-- #SAR [SARLO-80: Worldwide Slant SAR Language Optic Dataset at 80 cm Resolution | HF](https://huggingface.co/blog/Solene27/sarlo-80-slant-sar-language-optic-dataset)
-- #SAR [Detecting Beyond Sight: Building AI-Enabled SAR Intelligence with Synthetic Data | HF](https://huggingface.co/blog/DualityAI-RebekahBogdanoff/ai-enabled-sar-intelligence-synthetic-data)
-- [Custom instructions with AGENTS.md | OpenAI](https://developers.openai.com/codex/guides/agents-md)
+- [11/12] #SAR [SARLO-80: Worldwide Slant SAR Language Optic Dataset at 80 cm Resolution | HF](https://huggingface.co/blog/Solene27/sarlo-80-slant-sar-language-optic-dataset)
+- [11/12] #SAR [Detecting Beyond Sight: Building AI-Enabled SAR Intelligence with Synthetic Data | HF](https://huggingface.co/blog/DualityAI-RebekahBogdanoff/ai-enabled-sar-intelligence-synthetic-data)
+- [11/12] [Custom instructions with AGENTS.md | OpenAI](https://developers.openai.com/codex/guides/agents-md)
 
-10/12
-- [Making Sense of Memory in AI Agents | Leonie Monigatti](https://www.leoniemonigatti.com/blog/memory-in-ai-agents.html)
-- [From DeepSeek v3 to v3.2 | Sebastian Raschka](https://magazine.sebastianraschka.com/p/technical-deepseek)
-- (maybe) [GRPO's new variants and implementation secrets | Nathan Lambert (YouTube)](https://youtu.be/amrJDwMUFNs?si=jUYxlD02If9cVlf0)
-- [Continuous Batching | HuggingFace (Gemini)](https://gemini.google.com/share/4f268ad0e1ae)
+- [10/12] [Making Sense of Memory in AI Agents | Leonie Monigatti](https://www.leoniemonigatti.com/blog/memory-in-ai-agents.html)
+- [10/12] [From DeepSeek v3 to v3.2 | Sebastian Raschka](https://magazine.sebastianraschka.com/p/technical-deepseek)
+- [10/12] [Understanding Reasoning LLMs | Sebastian Raschka](https://magazine.sebastianraschka.com/p/understanding-reasoning-llms)
+- [10/12] (maybe) [GRPO's new variants and implementation secrets | Nathan Lambert (YouTube)](https://youtu.be/amrJDwMUFNs?si=jUYxlD02If9cVlf0)
+- ~~[10/12] [Continuous Batching | HuggingFace (Gemini)](https://gemini.google.com/share/4f268ad0e1ae)~~
 - [Reasoning Effort Modulation | ChatGPT](https://chatgpt.com/s/t_6937198c7f60819181281c3f3a1cbb5e)
 ---
 ##### Week 49 (1st - 7th)
