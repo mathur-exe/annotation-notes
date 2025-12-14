@@ -1,4 +1,12 @@
 ##### Week 50 (8th - 14th)
+- [13/12] Diffusion Modela
+    - Original Paper: [arxiv](https://arxiv.org/pdf/2206.00364) --> print
+    - [The Annotated Diffusion Model | HuggingFace](https://huggingface.co/blog/annotated-diffusion)
+    - [Diffusion Language Models: The New Paradigm | HuggingFace](https://huggingface.co/blog/ProCreations/diffusion-language-model)
+    - [What are Diffusion Models? | Lil'Log](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/)
+    - [Mercury | Technical Report](https://arxiv.org/pdf/2506.17298)
+    - [Large Langauge Diffusion Models | Google](https://arxiv.org/pdf/2502.09992)
+
 - [12/12] [From Async/Await to Virtual Threads ](https://lucumr.pocoo.org/2025/7/26/virtual-threads/)
 - [12/12] [Agent Design Is Still Hard](https://lucumr.pocoo.org/2025/11/21/agents-are-hard/)
 - [12/12] [LLM APIs are a Synchronization Problem](https://lucumr.pocoo.org/2025/11/22/llm-apis/)
