@@ -1,5 +1,6 @@
 ##### Week 51 (15th - 21st)
 - GDM corresponding post: [Linkedin](https://www.linkedin.com/posts/prateek-jain-1579191a_pre-doctoral-researcher-university-graduate-activity-7404209572078608384-bvj_)
+    - [Diffusion Study Plan | Arc Folder](https://arc.net/folder/254B79ED-A331-45FA-B69F-0E2359F71E66)
 
 
 ##### Week 50 (8th - 14th)
