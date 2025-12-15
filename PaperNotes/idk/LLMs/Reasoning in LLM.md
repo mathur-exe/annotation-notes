@@ -1,5 +1,19 @@
 ### Terminology
 1. Process Reward Model (PRM)
+	- it's a classifier / regression model which evaluates / scores intermediate reasoning steps, not just final answer
+	- Possible methods
+		1. steer search: pick partial solution branch to extend
+		2. rerank candidates: best-of-N with step-level-score
+		3. train reasoners: denser learning signals than correct / in-correct
+	- Training of PRMs
+		- human annotation of reasoning steps
+		- automatically labelling through verifier (calculator, compiler)
+		- Distillation / self-play generation, i.e. mark 
+	- why PRM fail? --> PRMs can be gamed, i.e.
+		- Reward Hacking: generator may learn to produce steps that look high-quality to PRM but aren't useful
+		- PRM maybe me miscalibrated on hard / out-of-distribution problem 
+		- if PRM is noisy, the search amplifies noise, i.e confidently following wrong branch
+2. next_term
 
 ### Notes
 
