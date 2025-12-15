@@ -1,3 +1,6 @@
+##### Week 51 (15th - 21st)
+- [Diffusion Study Plan](https://arc.net/folder/254B79ED-A331-45FA-B69F-0E2359F71E66)
+
 ##### Week 50 (8th - 14th)
 - [13/12] Diffusion Modela
     - Original Paper: [arxiv](https://arxiv.org/pdf/2206.00364) --> print
