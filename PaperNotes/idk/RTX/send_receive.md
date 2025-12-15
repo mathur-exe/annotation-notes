@@ -1,5 +1,6 @@
 ##### Week 51 (15th - 21st)
-- [Diffusion Study Plan](https://arc.net/folder/254B79ED-A331-45FA-B69F-0E2359F71E66)
+- GDM corresponding post: [Linkedin](https://www.linkedin.com/posts/prateek-jain-1579191a_pre-doctoral-researcher-university-graduate-activity-7404209572078608384-bvj_)
+
 
 ##### Week 50 (8th - 14th)
 - [13/12] Diffusion Modela
