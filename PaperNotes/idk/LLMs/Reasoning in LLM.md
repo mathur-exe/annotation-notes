@@ -8,20 +8,46 @@
 	- Training of PRMs
 		- human annotation of reasoning steps
 		- automatically labelling through verifier (calculator, compiler)
-		- Distillation / self-play generation, i.e. mark 
+		- [^1] Distillation / self-play generation, i.e. mark 
 	- why PRM fail? --> PRMs can be gamed, i.e.
 		- Reward Hacking: generator may learn to produce steps that look high-quality to PRM but aren't useful
-		- PRM maybe me miscalibrated on hard / out-of-distribution problem 
+		- [^2] PRM maybe me miscalibrated on hard / out-of-distribution problem 
 		- if PRM is noisy, the search amplifies noise, i.e confidently following wrong branch
-2. next_term
-
+2. Mapping: LLM Reasoning Concepts → Classical RL Terminology
 ### Notes
+##### N1. Distillation / self-play generation
+- 
 
+##### N2. PRM miscalibration on hard / OOD steps
+* 
+---
 ### Inference-time Compute Methods
 #### s1: Simple test-time scaling
-#### Can a 1B LLM Surpass a 405B LLM?
+- Approach 1: This paper introduces "wait" token which more modern version of aforementioned "think step by step".  
+- Approach 2: Authors found sequential inference scaling technique (like budge forcing)  more effective over parallel techniques (like majority voting) which aggregate multiple independent completions over 
+	- Though the paper doesn't compare more sophisticated parallel inference scaling methods liek beam search, lookahead search or best compute optimal search described in "Google’s Scaling LLM Test-Time Compute Optimally Can Be More Effective Than Scaling Model Parameters" paper
 
+<div style="text-align:center;">
+  <img src="Pasted image 20251216011307.png"
+       alt="image description"
+       style="display:block; margin:0 auto; max-width:100%; height:auto; width:400px;">
+  <em>Illustration of "wait" token insertion to control length of output</em>
+</div>
 
+#### Step Back to Leap Forward
+* Paper Link: https://arxiv.org/abs/2502.04404
+* The paper proposed self-backtracking mech that allows LLM to improve reasoning by learning when and where to backtrack during training and inference. 
+	* Training involves teaching the model to recognised a sub-optimal path using "a token", 
+	* key contribution: inference-time tree-based search that uses back-tracking to explore alternative solutions
+
+<div style="text-align:center;">
+  <img src="Pasted image 20251216012634.png"
+       alt="image description"
+       style="display:block; margin:0 auto; max-width:100%; height:auto; width:650px;">
+  <em></em>
+</div>
+
+---
 ### DeepSeek Perspective
 <div style="text-align:center;">
   <img src="DeepSeek-model-paradigrm.png"
@@ -51,3 +77,7 @@
 ##### DeepSeek R1-Distill-Qwen
 * Distillation in LLMs, does not necessarily follow the classical knowledge distillation approach used in deep learning. Traditionally, in knowledge distillation smaller student model is trained on both the logits of a larger teacher model and a target dataset. *Instead, here distillation refers to instruction fine-tuning smaller LLMs*
 * Researchers at DeepSeek, checked if emergent reasoning capabilities can emerge in smaller distilled model. The table below clearly indicates distill models far outperform pure-RL model (like R1-Zero and Qwq-32B-Preview)
+
+[^1]: refer to N1 of Notes
+
+[^2]: refer to N2 of Notes
