@@ -14,12 +14,60 @@
 		- [^2] PRM maybe me miscalibrated on hard / out-of-distribution problem 
 		- if PRM is noisy, the search amplifies noise, i.e confidently following wrong branch
 2. Mapping: LLM Reasoning Concepts → Classical RL Terminology
+
+| LLM / Reasoning term               | classical RL term                 | meaning / intuition                                                                                                           |
+| ---------------------------------- | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| Generator / Reasoner / Actor \ LLM | Policy                            | -- LLM: stochastic policy<br>-- actions: tokens                                                                               |
+| Prompt \ Partial CoT / Prefix      | State                             | each generated token transitions the env to a new state                                                                       |
+| Next Token \ reasoning step        | Action                            | Tokens: discrete actions in huge action space                                                                                 |
+| Final answer correctness           | terminal reward                   | Sparse reward: given only at episode end                                                                                      |
+| Verifier award                     | Env reward                        | -- Ground Truth reward<br>-- ideally RL signal, shouldn't be learned                                                          |
+| Outcome Reward Model. (ORM)        | Terminal Reward estimator         | score only complete trajectories                                                                                              |
+| Process Reward Model (PRM)         | Dense Reward / Value approximator |                                                                                                                               |
+| PRM miscalibration                 | Value Function Error              | value fn breaks on hard / OOD problems                                                                                        |
+| Best-of-N \ self-consistency       | monte-carlo eval + selection      | -- sample multiple trajectories<br>-- no learning                                                                             |
+| Tree of Thought                    | Tree Search                       | explicit search over action / state tree using value estimator                                                                |
+| MCTS style reasoning               | monte-carlo tree search           |                                                                                                                               |
+| Value model / verifier             | critic                            | Expected return from a state                                                                                                  |
+| self-critique / self-reflection    | Policy Improvement                | model reviews trajectory after detecting low value                                                                            |
+| Self-backtracking                  | rollback                          | learned ability to abandon low-value branch                                                                                   |
+| Thinking Tokens / reasoning budget | Planning horizon / compute budget |                                                                                                                               |
+| Supervised reasoning traces        | imitation learning                | learn policy from expert trajectories                                                                                         |
+| PPO-style RHLF                     | Policy Gradient RL                | token level policy optimization<br>-- policy action space is token, PPO updates at token level (even the reward is seq-level) |
+| Distillation from search           | Policy Distillation               | Train policy to imitate expensive search outputs                                                                              |
+| sampling many -> <br>label prefix  | monte-carlo value estimation      | estimate value of a state by rollout success freq                                                                             |
+
 ### Notes
 ##### N1. Distillation / self-play generation
-- 
+Goal is to train PRM to estimate which estimates the liklihood of prefix to eventually produce final correct final answer
 
+* Method
+	1. sample full solution trajectories from LLM
+	2. check final correctness of each trajectory (via ground truth, test, verifier)
+	3. Label of each trajectory whether the final outcome was successful or not
+	4. Train PRM to predict: $P(\text{correct final answer} \quad | \quad \text{prefix})$
+
+> PRM training via many sampled path is just Monte Carlo value learning: estimate how promising a reasoning prefix is by observing how often rollout from it succeed
+
+* Yet, this doesn't solve PRM miscalibration problem
+	* Distribution mismatch: difference in prefix seen after inference and training
+	* Label noise: low-quality solutions generate by LLM which superficially look good
+	* Rare Events: hard problem have rare and crutial structure that don't occur often enough in training data
 ##### N2. PRM miscalibration on hard / OOD steps
-* 
+PRM models are calibrated if its score correspond well to actual probability. In setting like (1) Hard Problem and (2) Out-of-distribution steps the model takes a but hit
+Here, (1) "prefix" refers to partial chain of reasoning (2) "rollout" refers to running current policy to full trajectory generation, then observing the output
+1. Hard Problem
+	- PRM's internal assumptions can break down, and assign high scores to prefixes that resemble training example, thereby leading to error which can be termed as miscalibration (scores don't reflect real outcome)
+	- Chain of thought are long and non-linear
+	- small mistakes early can drastically change the final outcome
+2. Out-of-distribution 
+	- if a prefix is not like anything seen in PRM training, the model predictions become unreliable. This leads to PRM being 
+		- overconfident in wrong direction: search will expand along wrong path
+		- underconfident in everywhere: waste compute exploring too many dead ends
+		- PRM with blind spots: entire class of problems will be solved poorly / not at all
+	- Causes
+		- Generator (here, LLM) explores the parts of reasoning space the PRM never saw
+		- inadequate domain knowledge
 ---
 ### Inference-time Compute Methods
 #### s1: Simple test-time scaling
