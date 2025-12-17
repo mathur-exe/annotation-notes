@@ -1,8 +1,8 @@
 ##### Week 51 (15th - 21st)
-- GDM corresponding post: [Linkedin](https://www.linkedin.com/posts/prateek-jain-1579191a_pre-doctoral-researcher-university-graduate-activity-7404209572078608384-bvj_)
+- [18/12] [LLM arch | Arc Folder](https://arc.net/folder/00AB19B3-2725-407C-949B-BD71487B4996)
+- [16/11] GDM corresponding post: [Linkedin](https://www.linkedin.com/posts/prateek-jain-1579191a_pre-doctoral-researcher-university-graduate-activity-7404209572078608384-bvj_)
     - [Diffusion Study Plan | Arc Folder](https://arc.net/folder/254B79ED-A331-45FA-B69F-0E2359F71E66)
     - [RL | Arc Folder](https://arc.net/folder/800BBB31-AC9E-42FD-986B-09520090F051)
-
 
 ##### Week 50 (8th - 14th)
 - [13/12] Diffusion Modela
