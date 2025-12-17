@@ -29,3 +29,14 @@
 #### Connecting to olmo-3 tech report
 * Since GPUs cannot process tensors of different shapes within a single batch, padding tokens are required. OlmoRL addresses this hardware constraint through continuous batching
 * The role of *Active Sampling* from olmo-3 tech report can be confusing here. In practice, it is an algorithmic efficiency mechanism that removes zero-grad batches and replaces them with new prompts, ensuring the GPU consistently operates at maximum batch capacity
+
+### vLLM Anatomy
+References:
+- vLLM Anatomy
+- ChatGPT Thread: 
+
+#### Scheduler
+> V0 Engine can only handle 
+
+1. Prefill Request
+2. Decode Request
