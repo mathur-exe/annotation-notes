@@ -105,13 +105,13 @@ Here, (1) "prefix" refers to partial chain of reasoning (2) "rollout" refers to 
 </div>
 
 ##### Additional Info
-* DeepSeek R1 technical report categorizes common inference-time scaling methods (such as Process Reward Model-based and Monte Carlo Tree Search-based approaches) under "unsuccessful attempts." This suggests that DeepSeek did not explicitly use these techniques beyond the R1 model's natural tendency to generate longer responses
+* DeepSeek R1 technical report categorizes common inference-time scaling methods (such as Process Reward Model and Monte Carlo Tree Search approaches) under "unsuccessful attempts." This suggests that DeepSeek did not explicitly use these techniques beyond the R1 model's natural tendency to generate longer responses
 
-> However, inference-time scaling is not often implemented at the application layer rather than within the LLM itself, so DeepSeek may still apply such techniques within their app.
+> However, inference-time scaling is not often implemented at within the LLM  rather application layer, so DeepSeek may still apply such techniques within their app.
 
 * Improvement from "within the LLM" come from model's own generation capabilities like (1) naturally generating longer responses, (2) thinking tokens
 * While application layer inside (1) Best of N, (2) Self-consistency, (3) Self-consistency, (4) Tool-augmented loops, (5) Critique-and-revise and (6) MCTS / tree search
-* The R1 technical report may suggest certain methods (like MCTC and PRM) were unsuccessful but they DeepSeek could still be using it their product pipeline
+* The R1 technical report may suggest certain methods (like MCTC and PRM) were unsuccessful but DeepSeek could still be using it their product pipeline
 
 ##### DeepSeek R1-Zero
 * R1-Zero has been built on pre-trained DeepSeek V3 (base-model), which is pure RL finetuned based on accuracy and format rewards. 
