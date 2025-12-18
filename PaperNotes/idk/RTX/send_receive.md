@@ -1,4 +1,5 @@
 ##### Week 51 (15th - 21st)
+- [19/12] [Feynman diagrams | overleaf](https://www.overleaf.com/learn/latex/Feynman_diagrams)
 - [18/12] #TODO: plan arch study, do I need to study VLMs as well
 - [18/12] [LLM arch | Arc Folder](https://arc.net/folder/00AB19B3-2725-407C-949B-BD71487B4996)
 - [16/11] GDM corresponding post: [Linkedin](https://www.linkedin.com/posts/prateek-jain-1579191a_pre-doctoral-researcher-university-graduate-activity-7404209572078608384-bvj_)
