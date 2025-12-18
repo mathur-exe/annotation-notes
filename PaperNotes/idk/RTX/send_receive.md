@@ -1,4 +1,5 @@
 ##### Week 51 (15th - 21st)
+- [19/12] [Academic Note-Taking: Source-Topic-Argument system | from X.com](https://effortlessacademic.com/academic-note-taking-system/?utm_source=twitter&utm_campaign=NovDec&utm_content=blog)
 - [19/12] [Feynman diagrams | overleaf](https://www.overleaf.com/learn/latex/Feynman_diagrams)
 - [18/12] #TODO: plan arch study, do I need to study VLMs as well
 - [18/12] [LLM arch | Arc Folder](https://arc.net/folder/00AB19B3-2725-407C-949B-BD71487B4996)
