@@ -1,13 +1,18 @@
+### Arc Folder
+- RL: https://arc.net/folder/800BBB31-AC9E-42FD-986B-09520090F051
+- Diffusion Models (Text): https://arc.net/folder/254B79ED-A331-45FA-B69F-0E2359F71E66
+- LLM architecture: https://arc.net/folder/00AB19B3-2725-407C-949B-BD71487B4996
+
+---
+
+### Date-wise
 ##### Week 51 (15th - 21st)
 - #job [Research Engineer, AI Evals | Huds (YC)](https://www.ycombinator.com/companies/hud/jobs/L9uENu6-research-engineer-agentic-ai-evals)
     - look at what they do
 - [19/12] [Academic Note-Taking: Source-Topic-Argument system | from X.com](https://effortlessacademic.com/academic-note-taking-system/?utm_source=twitter&utm_campaign=NovDec&utm_content=blog)
 - [19/12] [Feynman diagrams | overleaf](https://www.overleaf.com/learn/latex/Feynman_diagrams)
 - [18/12] #todo: plan arch study, do I need to study VLMs as well
-- [18/12] [LLM arch | Arc Folder](https://arc.net/folder/00AB19B3-2725-407C-949B-BD71487B4996)
 - [16/11] GDM corresponding post: [Linkedin](https://www.linkedin.com/posts/prateek-jain-1579191a_pre-doctoral-researcher-university-graduate-activity-7404209572078608384-bvj_)
-    - [Diffusion Study Plan | Arc Folder](https://arc.net/folder/254B79ED-A331-45FA-B69F-0E2359F71E66)
-    - [RL | Arc Folder](https://arc.net/folder/800BBB31-AC9E-42FD-986B-09520090F051)
 
 ##### Week 50 (8th - 14th)
 - [13/12] Diffusion Modela
