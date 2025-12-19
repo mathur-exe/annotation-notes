@@ -7,6 +7,7 @@
 
 ### Date-wise
 ##### Week 51 (15th - 21st)
+- [vllm PR - interleave thinking](https://github.com/vllm-project/vllm/pull/28531)
 - #job [Research Engineer, AI Evals | Huds (YC)](https://www.ycombinator.com/companies/hud/jobs/L9uENu6-research-engineer-agentic-ai-evals)
     - look at what they do
 - [19/12] [Academic Note-Taking: Source-Topic-Argument system | from X.com](https://effortlessacademic.com/academic-note-taking-system/?utm_source=twitter&utm_campaign=NovDec&utm_content=blog)
