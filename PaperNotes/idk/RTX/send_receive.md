@@ -18,6 +18,8 @@
 
 ### Date-wise
 ##### Week 52 (22nd - 24th)
+- [The Eiffel Tower Llama | HuggingFace Interpretabilty](https://huggingface.co/spaces/dlouapre/eiffel-tower-llama)
+    - [neuronpedia.org | Interpretabilty](https://www.neuronpedia.org/)
 
 ##### Week 51 (15th - 21st)
 - [vllm PR - interleave thinking](https://github.com/vllm-project/vllm/pull/28531)
