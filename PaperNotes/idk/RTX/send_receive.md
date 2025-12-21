@@ -3,9 +3,13 @@
 - Diffusion Models (Text): https://arc.net/folder/254B79ED-A331-45FA-B69F-0E2359F71E66
 - LLM architecture: https://arc.net/folder/00AB19B3-2725-407C-949B-BD71487B4996
 
+### Langchain / LangGraph
+- LangSmith Course: [course link | LangChain Academy](https://academy.langchain.com/courses/quickstart-langsmith-essentials/?utm_medium=social&utm_source=youtube&utm_campaign=q4-2025_langsmith-quickstart-academy-launch_co)
+
 ---
 
 ### Date-wise
+
 ##### Week 51 (15th - 21st)
 - [vllm PR - interleave thinking](https://github.com/vllm-project/vllm/pull/28531)
 - #job [Research Engineer, AI Evals | Huds (YC)](https://www.ycombinator.com/companies/hud/jobs/L9uENu6-research-engineer-agentic-ai-evals)
