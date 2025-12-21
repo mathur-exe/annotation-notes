@@ -8,6 +8,11 @@
 - [Building Effective Agents | LangChain (YouTube)](https://youtu.be/aHCDrAbH_go?si=FMISvF0iqGvuSpZ0)
 - [Approaching to managing agent memory | LangChain (YouTube)](https://youtu.be/3aS1A-0775s?si=GohV1TOhaZ57rnC_)
 - [MCP + Deffered Loading | LangChain (YouTube)](https://youtu.be/n-Hw_K_GsOg?si=woIZ7B6sP3kKYmNd)
+- Middleware
+    - [ToDoMiddleware](https://youtu.be/dwvhZ1z_Pas?si=F3wl67QzIYVOKik3)
+    - [Human in the Loop](https://youtu.be/tdOeUVERukA?si=4jEImbtWKVb49raE)
+- [How agents use context engineering | LangChain (YouTube)](https://youtu.be/XFCkrYHHfpQ?si=oJqxrVkfBLDPyUQa)
+
 
 ---
 
