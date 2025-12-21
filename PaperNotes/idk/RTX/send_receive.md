@@ -5,6 +5,9 @@
 
 ### Langchain / LangGraph
 - LangSmith Course: [course link | LangChain Academy](https://academy.langchain.com/courses/quickstart-langsmith-essentials/?utm_medium=social&utm_source=youtube&utm_campaign=q4-2025_langsmith-quickstart-academy-launch_co)
+- [Building Effective Agents | LangChain (YouTube)](https://youtu.be/aHCDrAbH_go?si=FMISvF0iqGvuSpZ0)
+- [Approaching to managing agent memory | LangChain (YouTube)](https://youtu.be/3aS1A-0775s?si=GohV1TOhaZ57rnC_)
+- [MCP + Deffered Loading | LangChain (YouTube)](https://youtu.be/n-Hw_K_GsOg?si=woIZ7B6sP3kKYmNd)
 
 ---
 
