@@ -20,6 +20,9 @@
 ##### Week 52 (22nd - 24th)
 - [The Eiffel Tower Llama | HuggingFace Interpretabilty](https://huggingface.co/spaces/dlouapre/eiffel-tower-llama)
     - [neuronpedia.org | Interpretabilty](https://www.neuronpedia.org/)
+- [What is context rot? | Redis](https://redis.io/blog/context-rot/)
+- [10 techniques to optimize your semantic cache | Redis](https://redis.io/blog/10-techniques-for-semantic-cache-optimization/)
+- [Elasticsearch vs. OpenSearch | Redis](https://redis.io/blog/elasticsearch-vs-opensearch/)
 
 ##### Week 51 (15th - 21st)
 - [vllm PR - interleave thinking](https://github.com/vllm-project/vllm/pull/28531)
