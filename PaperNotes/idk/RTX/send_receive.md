@@ -12,6 +12,8 @@
     - [ToDoMiddleware](https://youtu.be/dwvhZ1z_Pas?si=F3wl67QzIYVOKik3)
     - [Human in the Loop](https://youtu.be/tdOeUVERukA?si=4jEImbtWKVb49raE)
 - [How agents use context engineering | LangChain (YouTube)](https://youtu.be/XFCkrYHHfpQ?si=oJqxrVkfBLDPyUQa)
+- [Context Engineering with LangChain and Manus | LangChain (YouTube)](https://youtu.be/6_BcCthVvb8?si=BHcYmF90BONflNHE)
+
 
 
 ---
