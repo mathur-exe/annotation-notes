@@ -14,6 +14,10 @@
 - [How agents use context engineering | LangChain (YouTube)](https://youtu.be/XFCkrYHHfpQ?si=oJqxrVkfBLDPyUQa)
 - [Context Engineering with LangChain and Manus | LangChain (YouTube)](https://youtu.be/6_BcCthVvb8?si=BHcYmF90BONflNHE)
 
+### Codex
+- [Basic Config (Codex) | OpenAI Docs](https://developers.openai.com/codex/config-basic)
+- [Advanced Config (Codex) | OpenAI Docs](https://developers.openai.com/codex/config-advanced)
+- [Sample Config (Codex) | OpenAI Docs](https://developers.openai.com/codex/config-sample)
 
 ---
 
