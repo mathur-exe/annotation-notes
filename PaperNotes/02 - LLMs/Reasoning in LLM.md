@@ -76,7 +76,7 @@ Here, (1) "prefix" refers to partial chain of reasoning (2) "rollout" refers to 
 	- Though the paper doesn't compare more sophisticated parallel inference scaling methods liek beam search, lookahead search or best compute optimal search described in "Google’s Scaling LLM Test-Time Compute Optimally Can Be More Effective Than Scaling Model Parameters" paper
 
 <div style="text-align:center;">
-  <img src="Pasted image 20251216011307.png"
+  <img src="../_assets/Pasted image 20251216011307.png"
        alt="image description"
        style="display:block; margin:0 auto; max-width:100%; height:auto; width:400px;">
   <em>Illustration of "wait" token insertion to control length of output</em>
@@ -89,7 +89,7 @@ Here, (1) "prefix" refers to partial chain of reasoning (2) "rollout" refers to 
 	* key contribution: inference-time tree-based search that uses back-tracking to explore alternative solutions
 
 <div style="text-align:center;">
-  <img src="Pasted image 20251216012634.png"
+  <img src="../_assets/Pasted image 20251216012634.png"
        alt="image description"
        style="display:block; margin:0 auto; max-width:100%; height:auto; width:650px;">
   <em></em>
@@ -98,7 +98,7 @@ Here, (1) "prefix" refers to partial chain of reasoning (2) "rollout" refers to 
 ---
 ### DeepSeek Perspective
 <div style="text-align:center;">
-  <img src="DeepSeek-model-paradigrm.png"
+  <img src="../_assets/DeepSeek-model-paradigrm.png"
        alt="image description"
        style="display:block; margin:0 auto; max-width:100%; height:auto; width:600px;">
   <em>Fig: Development process of DeepSeeks three different reasoning models discussed in DeepSeek R1 paper</em>

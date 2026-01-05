@@ -6,7 +6,7 @@
 - Result: adding variable-length batch with zero-padding, hence ever bit of information is used for real data
 
 <div style="text-align:center;">
-  <img src="Pasted image 20251210004354.png"
+  <img src="../_assets/Pasted image 20251210004354.png"
        alt="image description"
        style="display:block; margin:0 auto; max-width:100%; height:auto; width:600px;">
   <em></em>
@@ -20,7 +20,7 @@
 
 
 <div style="text-align:center;">
-  <img src="Pasted image 20251210011110.png"
+  <img src="../_assets/Pasted image 20251210011110.png"
        alt="image description"
        style="display:block; margin:0 auto; max-width:100%; height:auto; width:700px;">
   <em>Continuous Batching = Ragged batching + dynamic scheduling</em>

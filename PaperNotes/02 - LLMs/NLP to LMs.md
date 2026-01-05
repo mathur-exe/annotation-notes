@@ -333,7 +333,7 @@ $$
 * *OpenAI's scaling law* discovered test loss as power law wrt parameters, dataset size, and compute. But in their experiment, they had fixed the dataset size (300B tokens), hence, they had model which were undertrained (not enough data to saturate their capacity)
 * *Chinchilla* took this forward by varying parameters and dataset size across wide range. They concluded on same scaling law, and propose compute-optimal regime requiring balanced parameters and data
 <figure>
-  <img src="Pasted image 20250917214725.png" alt="Scaling laws">
+  <img src="../_assets/Pasted image 20250917214725.png" alt="Scaling laws">
   <figcaption style="font-size: 0.9em; color: grey; text-align: center;">
     The author pre-trained LLM with scaled upto 1.5B parameters over WebText2Corpurs. All models are trained using a fixed context length of 1,024 tokens and a standard next token prediction (cross-entropy) loss
   </figcaption>
@@ -344,7 +344,7 @@ Non-embedding Parameters:
 **Scaling Law Plots**
 Power law plots may look impressive at first glance, but it’s important to remember that they’re usually shown on a log-log scale. When converted back to a normal scale, power law decay looks a lot like exponential decay. This creates a misleading intuition: it seems as if LLM quality improves exponentially with more compute, when in fact the gains are much slower..
 <figure>
-  <img src="Pasted image 20250918003236.png" alt="Power Law Decay vs Exponential Decay">
+  <img src="../_assets/Pasted image 20250918003236.png" alt="Power Law Decay vs Exponential Decay">
   <figcaption style="font-size: 0.9em; color: grey; text-align: center;">
 Power Law Decay vs Exponential Decay
   </figcaption>
