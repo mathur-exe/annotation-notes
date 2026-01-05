@@ -15,10 +15,12 @@
 - [Context Engineering with LangChain and Manus | LangChain (YouTube)](https://youtu.be/6_BcCthVvb8?si=BHcYmF90BONflNHE)
 
 
-
 ---
 
 ### Date-wise
+##### Week 2 (5th - 11th)
+
+
 ##### Week 52 (22nd - 24th)
 - [The Eiffel Tower Llama | HuggingFace Interpretabilty](https://huggingface.co/spaces/dlouapre/eiffel-tower-llama)
     - [neuronpedia.org | Interpretabilty](https://www.neuronpedia.org/)
