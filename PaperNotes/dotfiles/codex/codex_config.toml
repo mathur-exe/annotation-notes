@@ -16,7 +16,7 @@ url="https://docs.langchain.com/mcp"
 command = "npx"
 args = ["-y", "mcp-remote@latest", "https://api.githubcopilot.com/mcp", "--header", "Authorization:${GITHUB_MCP_PAT}"]
 [mcp_servers.github.env]
-GITHUB_MCP_PAT = "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"
+GITHUB_MCP_PAT = "ghp_your_github_token_here"
 # ---
 [mcp_servers.context7]
 url = "https://mcp.context7.com/mcp"
