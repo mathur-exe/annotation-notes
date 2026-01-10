@@ -1,6 +1,7 @@
 ### Terminology
 1. Process Reward Model (PRM)
 	- it's a classifier / regression model which evaluates / scores intermediate reasoning steps, not just final answer
+	- The *challenge* with PRM are that it's not easy to check whether intermediate rewards are correct, and it can also lead to reward hacking
 	- Possible methods
 		1. steer search: pick partial solution branch to extend
 		2. rerank candidates: best-of-N with step-level-score

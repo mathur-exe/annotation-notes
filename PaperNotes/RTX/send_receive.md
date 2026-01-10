@@ -23,7 +23,7 @@
 
 ### Date-wise
 ##### Week 2 (5th - 11th)
-
+- {leisure_read} [Guide to Claude Code 2.0 (sankalp's blog)](https://sankalp.bearblog.dev/my-experience-with-claude-code-20-and-how-to-get-better-at-using-coding-agents/#my-codex-era)
 
 ##### Week 52 (22nd - 24th)
 - [The Eiffel Tower Llama | HuggingFace Interpretabilty](https://huggingface.co/spaces/dlouapre/eiffel-tower-llama)
