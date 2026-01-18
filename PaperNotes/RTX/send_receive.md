@@ -22,7 +22,8 @@
 
 ### OpenCode
 - Plugins
-    - [Plugin Docs | OpenCode](https://opencode.ai/docs/plugins/#_top)
+    - [Plugin Docs | OpenCode](https://opencode.ai/docs/plugins)
+    - [Community Plugins | OpenCode](https://opencode.ai/docs/ecosystem#plugins)
 ---
 
 ### Date-wise
