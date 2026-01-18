@@ -20,6 +20,8 @@
 - [Advanced Config (Codex) | OpenAI Docs](https://developers.openai.com/codex/config-advanced)
 - [Sample Config (Codex) | OpenAI Docs](https://developers.openai.com/codex/config-sample)
 
+### OpenCode
+- 
 ---
 
 ### Date-wise
