@@ -21,7 +21,8 @@
 - [Sample Config (Codex) | OpenAI Docs](https://developers.openai.com/codex/config-sample)
 
 ### OpenCode
-- 
+- Plugins
+    - [Plugin Docs | OpenCode](https://opencode.ai/docs/plugins/#_top)
 ---
 
 ### Date-wise
