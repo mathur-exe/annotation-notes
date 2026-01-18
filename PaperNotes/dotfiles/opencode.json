@@ -1,0 +1,68 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "plugin": [
+    "opencode-google-antigravity-auth"
+  ],
+  "provider": {
+    "google": {
+      "models": {
+        "gemini-claude-sonnet-4-5": {
+          "id": "gemini-claude-sonnet-4-5",
+          "name": "Claude Sonnet 4.5 (via Antigravity)",
+          "reasoning": true
+        },
+        "gemini-claude-sonnet-4-5-thinking": {
+          "id": "gemini-claude-sonnet-4-5-thinking",
+          "name": "Claude Sonnet 4.5 Thinking (via Antigravity)",
+          "reasoning": true
+        },
+        "gemini-claude-opus-4-5-thinking": {
+          "id": "gemini-claude-opus-4-5-thinking",
+          "name": "Claude Opus 4.5 Thinking (via Antigravity)",
+          "reasoning": true
+        }
+      }
+    },
+    "openai": {
+      "models": {
+        "gpt-5.2": {
+          "options": {
+            "reasoningEffort": "medium"
+          }
+        },
+        "gpt-5.2-codex": {
+          "options": {
+            "reasoningEffort": "medium"
+          }
+        }
+      }
+    }
+  },
+  "mcp": {
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+      "enabled": true
+    },
+    "github": {
+      "type": "remote",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "enabled": true,
+      "headers": {
+        "Authorization": "Bearer {env:GITHUB_MCP_PAT}"
+      }
+    },
+    "deepwiki": {
+      "type": "remote",
+      "url": "https://mcp.deepwiki.com/sse",
+      "enabled": true
+    }
+  },
+  "permission": {
+    "external_directory": {
+      "read": "allow",
+      "write": "ask"
+    }
+  }
+}
+
