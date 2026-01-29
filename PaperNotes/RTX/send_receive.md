@@ -19,6 +19,7 @@
 - [Basic Config (Codex) | OpenAI Docs](https://developers.openai.com/codex/config-basic)
 - [Advanced Config (Codex) | OpenAI Docs](https://developers.openai.com/codex/config-advanced)
 - [Sample Config (Codex) | OpenAI Docs](https://developers.openai.com/codex/config-sample)
+- [AI Research Skills | GitHub](https://github.com/zechenzhangAGI/AI-research-SKILLs.git)
 
 ### OpenCode
 - Plugins
