@@ -1,9 +1,9 @@
-### Arc Folder
+## Arc Folder
 - RL: https://arc.net/folder/800BBB31-AC9E-42FD-986B-09520090F051
 - Diffusion Models (Text): https://arc.net/folder/254B79ED-A331-45FA-B69F-0E2359F71E66
 - LLM architecture: https://arc.net/folder/00AB19B3-2725-407C-949B-BD71487B4996
 
-### Langchain / LangGraph
+## Langchain / LangGraph
 - LangSmith Course: [course link | LangChain Academy](https://academy.langchain.com/courses/quickstart-langsmith-essentials/?utm_medium=social&utm_source=youtube&utm_campaign=q4-2025_langsmith-quickstart-academy-launch_co)
 - [Building Effective Agents | LangChain (YouTube)](https://youtu.be/aHCDrAbH_go?si=FMISvF0iqGvuSpZ0)
 - [Approaching to managing agent memory | LangChain (YouTube)](https://youtu.be/3aS1A-0775s?si=GohV1TOhaZ57rnC_)
@@ -15,7 +15,7 @@
 - [Context Engineering with LangChain and Manus | LangChain (YouTube)](https://youtu.be/6_BcCthVvb8?si=BHcYmF90BONflNHE)
 - [Choosing the right multi-agent architecture | LangChain (YouTube)](https://youtu.be/fqvbxkgU6vE?si=dImiePq4JhtyWmOn)
 
-### Codex
+## Codex
 - [Basic Config (Codex) | OpenAI Docs](https://developers.openai.com/codex/config-basic)
 - [Advanced Config (Codex) | OpenAI Docs](https://developers.openai.com/codex/config-advanced)
 - [Sample Config (Codex) | OpenAI Docs](https://developers.openai.com/codex/config-sample)
@@ -27,7 +27,13 @@
     - [Community Plugins | OpenCode](https://opencode.ai/docs/ecosystem#plugins)
 ---
 
-### Date-wise
+## Date-wise
+### Week 5 (26/01 - 01/02)
+- [Read] [Inside OpenAI’s in-house data agent | OpenAI](https://openai.com/index/inside-our-in-house-data-agent/)
+- [Read] [Unrolling the Codex agent loop | OpenAI](https://openai.com/index/unrolling-the-codex-agent-loop/)
+- [Read] Scaling PostgreSQL to power 800 million ChatGPT users | OpenAI : [YouTube](https://youtu.be/ubpUjovBMAM?si=OhqC8ydrR9pcIAcb) & [Blog](https://openai.com/index/scaling-postgresql/)
+
+
 ##### Week 2 (5th - 11th)
 - {leisure_read} [Guide to Claude Code 2.0 (sankalp's blog)](https://sankalp.bearblog.dev/my-experience-with-claude-code-20-and-how-to-get-better-at-using-coding-agents/#my-codex-era)
 
