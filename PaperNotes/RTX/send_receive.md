@@ -32,6 +32,7 @@
 - [Read] [Inside OpenAI’s in-house data agent | OpenAI](https://openai.com/index/inside-our-in-house-data-agent/)
 - [Read] [Unrolling the Codex agent loop | OpenAI](https://openai.com/index/unrolling-the-codex-agent-loop/)
 - [Read] Scaling PostgreSQL to power 800 million ChatGPT users | OpenAI : [YouTube](https://youtu.be/ubpUjovBMAM?si=OhqC8ydrR9pcIAcb) & [Blog](https://openai.com/index/scaling-postgresql/)
+- [Blog] [Building Useful Systems | Neel Nanda](https://dynalist.io/d/pgngbu6nDQbQzu1Gcof3Dj1i#z=pznohefw9903y9277WlU56fW)
 
 
 ##### Week 2 (5th - 11th)
