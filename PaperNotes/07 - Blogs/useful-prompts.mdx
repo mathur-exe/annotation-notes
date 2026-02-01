@@ -1,0 +1,35 @@
+---
+title: 'Cursor Resources'
+description: 'My skills and prompts for Cursor'
+pubDate: '2026-01-20'
+layoutType: 'council'
+tabs:
+  - label: Skills
+    id: cursor
+    # Items will be populated dynamically by the page handler
+  - label: ChatGPT / Gemini
+    id: gpt
+  - label: Slash-commands
+    id: codex
+---
+
+import RemoteFileViewer from '../../components/RemoteFileViewer.astro';
+
+<div id="cursor" class="tab-panel">
+    <div class="viewer-container">
+        <RemoteFileViewer url="https://raw.githubusercontent.com/mathur-exe/annotation-notes/main/PaperNotes/dotfiles/codex/skills/ask-questions-if-underspecified/SKILL.md" />
+    </div>
+</div>
+
+<div id="gpt" class="tab-panel">
+    <h3>ChatGPT / Gemini Resources</h3>
+    <p>Collection of prompts for general LLM usage.</p>
+    <div class="note-card">
+        <strong>Tip:</strong> Select the <em>Agent SKILLS</em> tab to see the detailed skill documentation.
+    </div>
+</div>
+
+<div id="codex" class="tab-panel">
+    <h3>Cursor slash-commands Resources</h3>
+    <pre><code>coming soon...</code></pre>
+</div>
