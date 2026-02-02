@@ -28,6 +28,17 @@
 ---
 
 ## Date-wise
+
+### Week 6 (02/02 - 08/02)
+- Silver & Read
+    - [The beauty of a boring budget | ValueResearch](https://www.valueresearchonline.com/stories/227636/the-beauty-of-a-boring-budget/?utm_source=2026-02-02-fundline&utm_medium=email&utm_campaign=fundline&utm_content=the-beauty-of-a-boring-budget&utm_term=first-page)
+    - [ou've been lied to about NPS contributions | ValueResearch](https://www.valueresearchonline.com/stories/227582/you-have-been-lied-about-nps-contributions/?utm_source=2026-02-02-fundline&utm_medium=email&utm_campaign=fundline&utm_content=you-have-been-lied-about-nps-contributions&utm_term=nps)
+    - [The principles machine | ValueResearch](The principles machinehttps://www.valueresearchonline.com/stories/223606/automated-investing-with-value-research-fund-advisor/?utm_source=2026-02-02-fundline&utm_medium=email&utm_campaign=fundline&utm_content=automated-investing-with-value-research-fund-advisor&utm_term=fund-advisor)
+    - [The trouble with silver ETFs in a rapidly crashing market | ValueResearch](https://www.valueresearchonline.com/stories/227628/the-trouble-with-silver-etfs-in-a-rapidly-crashing-market/?utm_source=2026-02-02-fundline&utm_medium=email&utm_campaign=fundline&utm_content=the-trouble-with-silver-etfs-in-a-rapidly-crashing-market&utm_term=fundwire)
+    - [Precious metals melt as $ flexes, world markets action heats up | Economic Times](https://economictimes.indiatimes.com/news/economy/finance/precious-metals-melt-as-flexes-world-markets-action-heats-up/articleshow/127813167.cms)
+    - [Metals meltdown: Here's the post-crash roadmap for gold and silver | ET](https://economictimes.indiatimes.com/news/economy/finance/metals-meltdown-heres-the-post-crash-roadmap-for-gold-and-silver/articleshow/127795032.cms)
+    - [Silver crashes over Rs 1 lakh to log worst-ever fall on MCX. 3 factors behind the decline | RT](https://economictimes.indiatimes.com/markets/commodities/news/silver-crashes-25-worst-in-15-years-what-drove-turmoil-and-whats-next-for-investors/articleshow/127813589.cms)
+
 ### Week 5 (26/01 - 01/02)
 - [Read] [Inside OpenAI’s in-house data agent | OpenAI](https://openai.com/index/inside-our-in-house-data-agent/)
 - [Read] [Unrolling the Codex agent loop | OpenAI](https://openai.com/index/unrolling-the-codex-agent-loop/)
