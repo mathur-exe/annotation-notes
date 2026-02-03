@@ -4,6 +4,7 @@
 - LLM architecture: https://arc.net/folder/00AB19B3-2725-407C-949B-BD71487B4996
 - WeChat Search: https://weixin.sogou.com/
 - Zhihu blogs: https://www.zhihu.com/
+- Blogs post from zartbot on hardware [#NetDAM](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzUxNzQ5MTExNw==&action=getalbum&album_id=2090889915268923394&subscene=159&subscene=190&scenenote=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3F__biz%3DMzUxNzQ5MTExNw%3D%3D%26mid%3D2247489194%26idx%3D3%26sn%3D8653690aae61bc08c47abbd1697a08b2%26chksm%3Df9960668cee18f7e387b3584b8aa4b036b5f2eada28179fc09e9f4aee59c21289bdd72aec26b%26cur_album_id%3D2090889915268923394%26scene%3D190%23rd&nolastread=1#wechat_redirect)
 
 ## Langchain / LangGraph
 - LangSmith Course: [course link | LangChain Academy](https://academy.langchain.com/courses/quickstart-langsmith-essentials/?utm_medium=social&utm_source=youtube&utm_campaign=q4-2025_langsmith-quickstart-academy-launch_co)
