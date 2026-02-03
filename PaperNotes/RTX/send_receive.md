@@ -2,6 +2,8 @@
 - RL: https://arc.net/folder/800BBB31-AC9E-42FD-986B-09520090F051
 - Diffusion Models (Text): https://arc.net/folder/254B79ED-A331-45FA-B69F-0E2359F71E66
 - LLM architecture: https://arc.net/folder/00AB19B3-2725-407C-949B-BD71487B4996
+- WeChat Search: https://weixin.sogou.com/
+- Zhihu blogs: https://www.zhihu.com/
 
 ## Langchain / LangGraph
 - LangSmith Course: [course link | LangChain Academy](https://academy.langchain.com/courses/quickstart-langsmith-essentials/?utm_medium=social&utm_source=youtube&utm_campaign=q4-2025_langsmith-quickstart-academy-launch_co)
@@ -30,6 +32,19 @@
 ## Date-wise
 
 ### Week 6 (02/02 - 08/02)
+- Chinese Blogs
+    - [Let's talk about Nested Learning | zartbot](https://mp.weixin.qq.com/s?__biz=MzUxNzQ5MTExNw==&mid=2247496860&idx=1&sn=4072e08d7ec30f3b5d7f678c17eaebab&chksm=f995e45ecee26d4876b46377353e1c5b9a60bb22013321155cd19af41003f6c59c0907de42f8&cur_album_id=3210156532718403586&scene=190#rd)
+    - [My friends and I created a small website for efficiently reading academic papers](https://zhuanlan.zhihu.com/p/262913024)
+    - [Refusing to follow the crowd, let's discuss the differences and experiences of several algorithm-related jobs](https://zhuanlan.zhihu.com/p/112066313)
+    - [Low training efficiency? Low GPU utilization? Check out some other people's tricks!](https://zhuanlan.zhihu.com/p/53345706)
+    - [Someone always has to do something different](https://zhuanlan.zhihu.com/p/446335540)
+    - [Let's talk about some trade-offs in chip design](https://mp.weixin.qq.com/s?src=11&timestamp=1767559309&ver=6460&signature=hOIcdAYe6Y39pcl*eZHj4MoCpLQeXdevAcPkf8GhzsXvraoF5bHri6SkY8v8icZyGj8Hdig0vNRV*j0RJuBQhIoGT5qmH*4DYRPu6-igRz4sU3gJwWz7UcbViM-qmM33&new=1)
+    - Nvidia GB200 Architecture | zartbot 
+        - Part 1: [link](https://mp.weixin.qq.com/s?__biz=MzUxNzQ5MTExNw==&mid=2247489194&idx=3&sn=8653690aae61bc08c47abbd1697a08b2&chksm=f9960668cee18f7e387b3584b8aa4b036b5f2eada28179fc09e9f4aee59c21289bdd72aec26b&cur_album_id=2090889915268923394&scene=190#rd)
+        - Part 2: [link](https://mp.weixin.qq.com/s?src=11&timestamp=1767559284&ver=6460&signature=hOIcdAYe6Y39pcl*eZHj4MoCpLQeXdevAcPkf8GhzsWxzGFWOK3DW4Y605rkytQvbeFxkVCRGAk2P8oPv4B7LI3cryIbk4luvUkLWF7AaliSe1NwqUooixkplLFwdhpD&new=1)
+    - [Let's talk about Nvidia's Blackwell](https://mp.weixin.qq.com/s?src=11&timestamp=1767559284&ver=6460&signature=hOIcdAYe6Y39pcl*eZHj4MoCpLQeXdevAcPkf8GhzsX82PqNZzddXaS2NBv63XAvNK03wTQYEWdNHzEMxZQi084HpAenEEdXB4yFjc-rjjoL3Qu*o94VpwaQUN6fLT5Q&new=1)
+    - [Let's discuss the split inference architecture of large models.](https://mp.weixin.qq.com/s?__biz=MzUxNzQ5MTExNw==&mid=2247490404&idx=2&sn=fed3ecbce73f1c834cd9cc85ceaae542&chksm=f9960ba6cee182b0607b65181e07d280e12e33ecbbc66567f276b8f8a4a68b8688d0c607ab24&cur_album_id=2090889915268923394&scene=190#rd)
+
 - Silver & Read
     - [The beauty of a boring budget | ValueResearch](https://www.valueresearchonline.com/stories/227636/the-beauty-of-a-boring-budget/?utm_source=2026-02-02-fundline&utm_medium=email&utm_campaign=fundline&utm_content=the-beauty-of-a-boring-budget&utm_term=first-page)
     - [ou've been lied to about NPS contributions | ValueResearch](https://www.valueresearchonline.com/stories/227582/you-have-been-lied-about-nps-contributions/?utm_source=2026-02-02-fundline&utm_medium=email&utm_campaign=fundline&utm_content=you-have-been-lied-about-nps-contributions&utm_term=nps)
