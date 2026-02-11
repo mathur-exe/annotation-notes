@@ -32,6 +32,10 @@
 
 ## Date-wise
 
+### Week 7 (09/02 - 15/02)
+- #job [LLM and Memory Researcher | Bangalore (smallest.ai)](https://jobs.ashbyhq.com/smallest/d2fafe7b-3ecb-410d-94d3-4f4e020aed1c)
+- [Anthropic + Nasa](https://www.anthropic.com/features/claude-on-mars)
+
 ### Week 6 (02/02 - 08/02)
 - Chinese Blogs
     - [Let's talk about Nested Learning | zartbot](https://mp.weixin.qq.com/s?__biz=MzUxNzQ5MTExNw==&mid=2247496860&idx=1&sn=4072e08d7ec30f3b5d7f678c17eaebab&chksm=f995e45ecee26d4876b46377353e1c5b9a60bb22013321155cd19af41003f6c59c0907de42f8&cur_album_id=3210156532718403586&scene=190#rd)
