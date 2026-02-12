@@ -34,7 +34,6 @@
 
 ### Week 7 (09/02 - 15/02)
 - #job [LLM and Memory Researcher | Bangalore (smallest.ai)](https://jobs.ashbyhq.com/smallest/d2fafe7b-3ecb-410d-94d3-4f4e020aed1c)
-- [Anthropic + Nasa](https://www.anthropic.com/features/claude-on-mars)
 - [How to Become a Hardware Engineer in 2026 | Twitter Article](https://x.com/Av1dlive/status/2017294782574579714?s=20)
 
 ### Week 6 (02/02 - 08/02)
