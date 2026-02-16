@@ -1,0 +1,4 @@
+interface:
+  display_name: "Writing"
+  short_description: "Clean, concrete prose across genres"
+  default_prompt: "Use $writing to draft a blog post about your topic."
