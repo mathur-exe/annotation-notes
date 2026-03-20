@@ -1,0 +1,4 @@
+interface:
+  display_name: "Code Cleanup"
+  short_description: "Simplify code and make it skimmable"
+  default_prompt: "Use $code-cleanup to simplify the code in this branch and make it easy to skim."
